@@ -47,6 +47,8 @@ const num = Math.floor(Math.random() * x);
 ```
 です。
 
+[答え](samples/lesson02-04.html)
+
 ## 課題5
 
 定数diceを宣言し、1〜6のランダムな数字で初期化します。

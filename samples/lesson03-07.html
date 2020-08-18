@@ -1,0 +1,26 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson03-07</title>
+    <script>
+        const array = [87, 96, 72, 88, 79];
+        let sum = 0;
+
+        for(const value of array) {
+            sum += value;
+        }
+
+        const average = sum / array.length;
+        console.log(`平均は${average}です`);
+
+        for(let i = 0; i < array.length; i++) {
+            if(array[i] >= average) {
+                console.log(`${i}番目の要素${array[i]}は平均以上です`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>配列の要素の平均を求め、平均以上の要素を出力します</h1>
+</body>
+</html>
