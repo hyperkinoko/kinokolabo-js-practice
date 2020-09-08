@@ -3,7 +3,7 @@
 ## 課題1
 「こんにちは」と出力する関数`sayHello`を定義し、呼び出しましょう。
 
-出力例
+出力例  
 ![出力例](images/lesson04-01-01.png)
 
 [答え](samples/lesson04/lesson04-01.html)
