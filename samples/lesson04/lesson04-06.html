@@ -1,0 +1,26 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson04-06</title>
+    <script>
+        diceAverage(10);
+        diceAverage(1000000);
+
+        function diceAverage(n) {
+            let sum = 0;
+
+            for(let i = 1; i <= n; i++) {
+                const diceNumber = dice();
+                sum += diceNumber;
+            }
+            console.log(`${n}回サイコロを投げたときの目の平均は${sum / n}です`);
+        }
+
+        function dice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

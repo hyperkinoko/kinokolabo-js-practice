@@ -1,0 +1,26 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson04-08</title>
+    <script>
+        const array1 = [87, 96, 72, 88, 79];
+        const array2 = [58, 91, 98, 96, 83];
+
+        console.log(`array1の最大値は${max(array1)}です`);
+        console.log(`array2の最大値は${max(array2)}です`);
+
+        function max(array) {
+            let max = 0;
+
+            for(const value of array) {
+                if(value > max) {
+                    max = value;
+                }
+            }
+            return max;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -5,14 +5,14 @@
 変数countを宣言し、0で初期化します。  
 while文を使って、countを1ずつ増やして出力することを100になるまで繰り返すコードを書いてみましょう。
 
-[答え](samples/lesson02-01.html)
+[答え](samples/lesson02/lesson02-01.html)
 
 
 ## 課題2
 
 課題1のコードをfor文を使って書き換えましょう。
 
-[答え](samples/lesson02-02.html)
+[答え](samples/lesson02/lesson02-02.html)
 
 ## 課題3
 
@@ -24,7 +24,7 @@ numの値が偶数か奇数かを調べて、偶数なら「偶数です」と�
 
 2で割り切れるかを調べるには、あまりを計算する「%」演算子を使うといいでしょう。
 
-[答え](samples/lesson02-03.html)
+[答え](samples/lesson02/lesson02-03.html)
 
 ## 課題4
 
@@ -47,7 +47,7 @@ const num = Math.floor(Math.random() * x);
 ```
 です。
 
-[答え](samples/lesson02-04.html)
+[答え](samples/lesson02/lesson02-04.html)
 
 ## 課題5
 
@@ -72,7 +72,7 @@ diceの値が偶数か奇数かを調べて、
 
 1〜6のランダムな数字を取得するには、まず0〜5のランダムな数字を取得し、それに1を足すといいでしょう。
 
-[答え](samples/lesson02-05.html)
+[答え](samples/lesson02/lesson02-05.html)
 
 ## 課題6
 
@@ -106,7 +106,7 @@ diceの値が偶数か奇数かを調べて、
 引き分け
 ```
 
-[答え](samples/lesson02-06.html)
+[答え](samples/lesson02/lesson02-06.html)
 
 ## 課題7
 
@@ -120,4 +120,4 @@ diceの値が偶数か奇数かを調べて、
 出力例  
 ![出力例](images/lesson02-07-01.png)
 
-[答え](samples/lesson02-07.html)
+[答え](samples/lesson02/lesson02-07.html)

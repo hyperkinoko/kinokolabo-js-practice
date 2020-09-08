@@ -1,0 +1,22 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson04-05</title>
+    <script>
+        let sum = 0;
+
+        for(let i = 1; i <= 5; i++) {
+            const diceNumber = dice();
+            console.log(`${i}回目の目は${diceNumber}です`);
+            sum += diceNumber;
+        }
+        console.log(`5回サイコロを投げたときの目の平均は${sum / 5}です`);
+
+        function dice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

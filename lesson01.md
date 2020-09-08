@@ -4,7 +4,7 @@
 
 コンソールに自分の名前を表示するコードを書いてみましょう。
 
-[答え](samples/lesson01-01.html)
+[答え](samples/lesson01/lesson01-01.html)
 
 
 ## 課題2
@@ -12,7 +12,7 @@
 定数ageを宣言し、宣言時に自分の年齢で初期化します。  
 コンソールにageの値を表示するコードを書き、自分の年齢が表示されることを確認しましょう。
 
-[答え](samples/lesson01-02.html)
+[答え](samples/lesson01/lesson01-02.html)
 
 ## 課題3
 
@@ -24,7 +24,7 @@
 
 と表示されるように書き換えましょう。
 
-[答え](samples/lesson01-03.html)
+[答え](samples/lesson01/lesson01-03.html)
 
 ## 課題4
 
@@ -32,7 +32,7 @@
 定数yを宣言し、宣言時に5で初期化します。  
 コンソールにxとyの合計値を表示しましょう。(8と表示されます）
 
-[答え](samples/lesson01-04.html)
+[答え](samples/lesson01/lesson01-04.html)
 
 ## 課題5
 
@@ -44,7 +44,7 @@
 
 と表示されるように書き換えましょう。
 
-[答え](samples/lesson01-05.html)
+[答え](samples/lesson01/lesson01-05.html)
 
 ## 課題6
 
@@ -57,11 +57,11 @@
 1. さらにcountを3増やして、コンソールにcountの値を表示しましょう。（5と表示されます）
 1. さらにcountを1増やして、コンソールにcountの値を表示しましょう。（6と表示されます）
 
-[答え](samples/lesson01-06.html)
+[答え](samples/lesson01/lesson01-06.html)
 
 ## 課題7
 
 定数numを宣言し、47で初期化します。  
 コンソールにnumを5で割ったあまりを表示しましょう。(2と表示されます）
 
-[答え](samples/lesson01-07.html)
+[答え](samples/lesson01/lesson01-07.html)

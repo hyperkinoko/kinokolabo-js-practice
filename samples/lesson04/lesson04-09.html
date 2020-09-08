@@ -1,0 +1,25 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson04-08</title>
+    <script>
+        const array1 = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう'];
+        const array2 = [58, 91, 98, 96, 83];
+
+        console.log(`array1にももは${find(array1, 'もも')}`);
+        console.log(`array2に96は${find(array2, 96)}`);
+
+        function find(array, target) {
+
+            for(const value of array) {
+                if(value === target) {
+                    return 'あります';
+                }
+            }
+            return 'ありません';
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

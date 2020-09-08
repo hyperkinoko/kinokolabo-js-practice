@@ -19,7 +19,7 @@
 
 を繰り返すといいでしょう。
 
-[答え](samples/lesson03-01.html)
+[答え](samples/lesson03/lesson03-01.html)
 
 ## 課題2
 
@@ -35,7 +35,7 @@ const array = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう
 3番目の要素はオレンジです
 ```
 
-[答え](samples/lesson03-02.html)
+[答え](samples/lesson03/lesson03-02.html)
 
 ## 課題3
 
@@ -51,7 +51,7 @@ const array = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう
 2番目の要素はみかんです
 ```
 
-[答え](samples/lesson03-03.html)
+[答え](samples/lesson03/lesson03-03.html)
 
 ### ヒント
 
@@ -68,7 +68,7 @@ const array = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう
 出力例  
 ![出力例](images/lesson03-04-01.png)
 
-[答え](samples/lesson03-04.html)
+[答え](samples/lesson03/lesson03-04.html)
 
 ## 課題5
 
@@ -84,7 +84,7 @@ const array = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう
 出力例  
 ![出力例](images/lesson03-05-01.png)
 
-[答え](samples/lesson03-05.html)
+[答え](samples/lesson03/lesson03-05.html)
 
 ## 課題6
 
@@ -104,7 +104,7 @@ const array = [87, 96, 72, 88, 79];
 
 変数sumを用意し、各要素を順に足していくと、最終的にsumは全要素の合計になります。
 
-[答え](samples/lesson03-06.html)
+[答え](samples/lesson03/lesson03-06.html)
 
 ## 課題7
 
@@ -121,4 +121,4 @@ const array = [87, 96, 72, 88, 79];
 
 計算した平均値を定数averageに格納し、各要素と大小を比較してみましょう。
 
-[答え](samples/lesson03-07.html)
+[答え](samples/lesson03/lesson03-07.html)
