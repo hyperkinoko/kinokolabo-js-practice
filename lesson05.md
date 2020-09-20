@@ -91,7 +91,7 @@ const arrayObject = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶ
 
 ## 課題6
 
-課題4で作った`books`配列の中の本を、課題5で作った`dispBookDetail`関数を使ってすべて表示しましょう。
+課題4で作った`books`配列の中の本を、課題5で作った`dispBookDetail`関数を使ってすべて表示しましょう。  
 `books`や`dispBookDetail`の定義はそれぞれからコピペしてください。
 
 出力例  
