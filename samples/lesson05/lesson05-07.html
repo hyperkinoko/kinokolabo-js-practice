@@ -1,0 +1,46 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson05-07</title>
+    <script>
+        const books = [
+            {
+                title: '改訂新版JavaScript本格入門 ~モダンスタイルによる基礎から現場での応用まで',
+                author: '山田 祥寛',
+                isbn13: '978-4774184111'
+            },
+            {
+                title: '初めてのJavaScript 第3版 ―ES2015以降の最新ウェブ開発',
+                author: 'Ethan Brown (著), 武舎 広幸 (翻訳), 武舎 るみ (翻訳)',
+                isbn13: '978-4873117836'
+            },
+            {
+                title: 'スラスラ読める JavaScript ふりがなプログラミング (ふりがなプログラミングシリーズ)',
+                author: 'リブロワークス  (著), 及川卓也  (監修)',
+                isbn13: '978-4295003854'
+            }
+        ];
+
+        books.push(
+            {
+                title: '確かな力が身につくJavaScript「超」入門 第2版',
+                author: '狩野 祐東',
+                isbn13: '978-4815601577'
+            }
+        );
+
+        for(let book of books) {
+            dispBookDetail(book);
+        }
+
+        function dispBookDetail(book) {
+            console.log(`===「${book.title}」===`);
+            console.log(`　　著者: ${book.author}`);
+            console.log(`　　ISBN-13: ${book.isbn13}`);
+            console.log(`=============================================`);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
