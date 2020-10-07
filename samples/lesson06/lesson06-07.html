@@ -1,0 +1,60 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson06-07</title>
+    <style>
+        #book-list {
+            list-style: none;
+        }
+
+        #book-list li {
+            width: 500px;
+            border: solid 1px #808080;
+            border-radius: 0.5em;
+            margin: 10px;
+            padding: 1em;
+        }
+
+        #book-list li:hover {
+            background-color: #CECECE;
+        }
+
+        #selected-book h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>本のリスト</h1>
+    <ul id="book-list"></ul>
+
+<script>
+    const books = [
+        {
+            title: '改訂新版JavaScript本格入門 ~モダンスタイルによる基礎から現場での応用まで',
+            author: '山田 祥寛',
+            isbn13: '978-4774184111'
+        },
+        {
+            title: '初めてのJavaScript 第3版 ―ES2015以降の最新ウェブ開発',
+            author: 'Ethan Brown (著), 武舎 広幸 (翻訳), 武舎 るみ (翻訳)',
+            isbn13: '978-4873117836'
+        },
+        {
+            title: 'スラスラ読める JavaScript ふりがなプログラミング (ふりがなプログラミングシリーズ)',
+            author: 'リブロワークス  (著), 及川卓也  (監修)',
+            isbn13: '978-4295003854'
+        }
+    ];
+
+    const ulElement = document.getElementById('book-list');
+
+    for(const book of books) {
+        const newLiElement = document.createElement('li');
+        newLiElement.innerHTML = book.title;
+
+        ulElement.appendChild(newLiElement);
+    }
+</script>
+</body>
+</html>

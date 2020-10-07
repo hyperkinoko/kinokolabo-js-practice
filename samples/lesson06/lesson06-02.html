@@ -1,0 +1,27 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson06-02</title>
+</head>
+<body>
+    <section id="self-introduction">
+        <h1>自己紹介</h1>
+        <p>こんにちは！私の名前は「<span id="name"></span>」です。</p>
+        <p>私は<span id="age"></span>歳です。</p>
+        <p>よろしくおねがいします！</p>
+    </section>
+
+<script>
+    const self = {
+        unsei: '松本 キノコ',
+        age: 28
+    };
+
+    const name = document.getElementById('name');
+    const age = document.getElementById('age');
+
+    name.innerHTML = self.unsei;
+    age.innerHTML = self.age;
+</script>
+</body>
+</html>

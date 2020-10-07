@@ -1,0 +1,58 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson06-05</title>
+</head>
+<body>
+    <h1>おみくじ</h1>
+
+    <p>こんにちは！<span id="name"></span>さん</p>
+    <p>今日のあなたの運勢は<span id="omikuji"></span>です！</p>
+
+<script>
+    const name = '松本 キノコ';
+    const nameElement = document.getElementById('name');
+    nameElement.innerHTML = name;
+
+    const rnd = Math.floor(Math.random() * 5);
+    let omikuji;
+
+    switch (rnd) {
+        case 0:
+            omikuji = {
+                unsei: '大吉',
+                color: '#ddce35'
+            };
+            break;
+        case 1:
+            omikuji = {
+                unsei: '中吉',
+                color: '#df84b5'
+            };
+            break;
+        case 2:
+            omikuji = {
+                unsei: '小吉',
+                color: '#48c33d'
+            };
+            break;
+        case 3:
+            omikuji = {
+                unsei: '凶',
+                color: '#af6710'
+            };
+            break;
+        case 4:
+            omikuji = {
+                unsei: '大凶',
+                color: '#000000'
+            };
+            break;
+    }
+
+    const omikujiElement = document.getElementById('omikuji');
+    omikujiElement.innerHTML = omikuji.unsei;
+    omikujiElement.style.color = omikuji.color;
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson06-04</title>
+</head>
+<body>
+    <h1>おみくじ</h1>
+
+    <p>こんにちは！<span id="name"></span>さん</p>
+    <p>今日のあなたの運勢は<span id="omikuji"></span>です！</p>
+
+<script>
+    const name = '松本 キノコ';
+    const nameElement = document.getElementById('name');
+    nameElement.innerHTML = name;
+
+    const unseis = ['大吉', '中吉', '小吉', '凶', '大凶'];
+    const rnd = Math.floor(Math.random() * 5);
+
+    const omikuji = document.getElementById('omikuji');
+    omikuji.innerHTML = unseis[rnd];
+</script>
+</body>
+</html>
