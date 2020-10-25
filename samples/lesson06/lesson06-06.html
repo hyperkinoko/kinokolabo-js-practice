@@ -13,9 +13,7 @@
     const name = '松本 キノコ';
     const nameElement = document.getElementById('name');
     nameElement.innerHTML = name;
-
-    const rnd = Math.floor(Math.random() * 5);
-
+    
     const omikujis = [
         {
             unsei: '大吉',
@@ -38,7 +36,9 @@
             color: '#000000'
         }
     ];
-
+    
+    const rnd = Math.floor(Math.random() * omikujis.length);
+    
     const omikujiElement = document.getElementById('omikuji');
     omikujiElement.innerHTML = omikujis[rnd].unsei;
     omikujiElement.style.color = omikujis[rnd].color;
