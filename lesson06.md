@@ -27,9 +27,8 @@
 下のようなオブジェクト定数`self`を定義して、自己紹介を表示するHTMLを作ってみましょう。
 
 ```javascript
-```javascript
 const self = {
-    unsei: '松本 キノコ',
+    name: '松本 キノコ',
     age: 28
 };
 ```
