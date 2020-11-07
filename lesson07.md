@@ -15,7 +15,7 @@
 
 ## 課題2
 
-課題1と同じものを、今度は、javascript内で`addEventListener`を使って実装してみてください。
+課題1と同じものを、今度は、javascript内で`addEventListener`を使って実装してみてください。  
 ただし、`<script>`タグ(javascript)は、`</head>`の**直前**に書きます。
 
 実行例  
