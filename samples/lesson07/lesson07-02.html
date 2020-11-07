@@ -1,0 +1,52 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson07-02</title>
+    <script>
+        const name = '松本 キノコ';
+        
+        const omikujis = [
+            {
+                unsei: '大吉',
+                color: '#ddce35'
+            },
+            {
+                unsei: '中吉',
+                color: '#df84b5'
+            },
+            {
+                unsei: '小吉',
+                color: '#48c33d'
+            },
+            {
+                unsei: '凶',
+                color: '#af6710'
+            },
+            {
+                unsei: '大凶',
+                color: '#000000'
+            }
+        ];
+
+        window.onload = () => {
+            document.getElementById('name').innerHTML = name;
+            document.getElementById('omikuji-button').addEventListener('click', draw, false);
+        };
+        
+        function draw() {
+            const rnd = Math.floor(Math.random() * 5);
+            const omikujiElement = document.getElementById('omikuji');
+            omikujiElement.innerHTML = omikujis[rnd].unsei;
+            omikujiElement.style.color = omikujis[rnd].color;
+        }
+    </script>
+</head>
+<body>
+    <h1>おみくじ</h1>
+
+    <button id="omikuji-button">おみくじを引く</button>
+    <p>こんにちは！<span id="name"></span>さん</p>
+    <p>今日のあなたの運勢は<span id="omikuji"></span>です！</p>
+
+</body>
+</html>

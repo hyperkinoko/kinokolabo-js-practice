@@ -1,0 +1,37 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson07-04</title>
+    <style>
+        #book-list {
+            list-style: none;
+        }
+
+        #book-list li {
+            width: 500px;
+            border: solid 1px #808080;
+            border-radius: 0.5em;
+            margin: 10px;
+            padding: 1em;
+        }
+
+        #book-list li:hover {
+            background-color: #CECECE;
+        }
+    </style>
+    <script>
+        function disp() {
+            console.log('クリックした');
+        }
+    </script>
+</head>
+
+<body>
+    <h1>本のリスト</h1>
+    <ul id="book-list">
+        <li onclick="disp()">改訂新版JavaScript本格入門 ~モダンスタイルによる基礎から現場での応用まで</li>
+        <li onclick="disp()">初めてのJavaScript 第3版 ―ES2015以降の最新ウェブ開発</li>
+        <li onclick="disp()">スラスラ読める JavaScript ふりがなプログラミング (ふりがなプログラミングシリーズ)</li>
+    </ul>
+</body>
+</html>

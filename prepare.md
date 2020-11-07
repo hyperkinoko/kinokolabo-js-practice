@@ -23,6 +23,7 @@ javascriptを実行するいちばん簡単な方法は、HTMLに埋め込むこ
 以下のファイルを作成して、`index.html`という名前で適当な場所に保存しましょう。
 
 ```javascript:index.html
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
