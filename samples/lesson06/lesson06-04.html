@@ -15,10 +15,10 @@
     nameElement.innerHTML = name;
 
     const unseis = ['大吉', '中吉', '小吉', '凶', '大凶'];
-    const rnd = Math.floor(Math.random() * 5);
-
-    const omikuji = document.getElementById('omikuji');
-    omikuji.innerHTML = unseis[rnd];
+    const rnd = Math.floor(Math.random() * unseis.length);
+    
+    const unseiElement = document.getElementById('omikuji');
+    unseiElement.innerHTML = unseis[rnd];
 </script>
 </body>
 </html>

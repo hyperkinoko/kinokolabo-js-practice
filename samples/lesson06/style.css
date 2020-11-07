@@ -1,0 +1,15 @@
+#book-list {
+    list-style: none;
+}
+
+#book-list li {
+    width: 500px;
+    border: solid 1px #808080;
+    border-radius: 0.5em;
+    margin: 10px;
+    padding: 1em;
+}
+
+#book-list .hover {
+    background-color: #CECECE;
+}
