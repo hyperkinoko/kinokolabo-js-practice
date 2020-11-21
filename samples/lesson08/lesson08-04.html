@@ -1,7 +1,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>lesson07-08</title>
+    <title>本棚アプリ</title>
     <style>
         #book-list {
             list-style: none;
@@ -34,6 +34,10 @@
         #add table {
             margin-bottom: 20px;
         }
+        
+        .error {
+            color: red;
+        }
     </style>
     <script>
         const books = [
@@ -55,15 +59,7 @@
         ];
         
         window.onload = () => {
-            const ulElement = document.getElementById('book-list');
-    
-            for(let index = 0; index < books.length; index++) {
-                const newLiElement = document.createElement('li');
-                newLiElement.innerHTML = books[index].title;
-                newLiElement.setAttribute('onclick', 'disp(' + index + ')');
-        
-                ulElement.appendChild(newLiElement);
-            }
+            reflesh();
         };
 
         function disp(index) {
@@ -73,17 +69,58 @@
         }
         
         function add() {
+            if(validate()) {
+                const title = document.getElementById('input-title').value;
+                const author = document.getElementById('input-author').value;
+                const isbn13 = document.getElementById('input-isbn13').value;
+    
+                const book = {
+                    title: title,
+                    author: author,
+                    isbn13: isbn13
+                };
+    
+                books.push(book);
+    
+                document.getElementById('input-title').value = '';
+                document.getElementById('input-author').value = '';
+                document.getElementById('input-isbn13').value = '';
+    
+                reflesh();
+            }
+        }
+        
+        function reflesh() {
+            const ulElement = document.getElementById('book-list');
+            ulElement.innerHTML = '';
+    
+            for(let index = 0; index < books.length; index++) {
+                const newLiElement = document.createElement('li');
+                newLiElement.innerHTML = books[index].title;
+                newLiElement.setAttribute('onclick', 'disp(' + index + ')');
+        
+                ulElement.appendChild(newLiElement);
+            }
+        }
+        
+        function validate() {
+            document.getElementById('error-title').innerHTML = '';
+            document.getElementById('error-author').innerHTML = '';
+
             const title = document.getElementById('input-title').value;
             const author = document.getElementById('input-author').value;
             const isbn13 = document.getElementById('input-isbn13').value;
             
-            const book = {
-                title: title,
-                author: author,
-                isbn13: isbn13
-            };
+            if(!title) {
+                document.getElementById('error-title').innerHTML = 'タイトルが空です';
+                return false;
+            }
             
-            console.log(book);
+            if(!author) {
+                document.getElementById('error-author').innerHTML = '著者が空です';
+                return false;
+            }
+            return true;
         }
     </script>
 </head>
@@ -97,7 +134,10 @@
                 <label for="input-title">タイトル：</label>
             </td>
             <td>
-                <input type="text" id="input-title">
+                <input type="text" id="input-title" onchange="validate()">
+            </td>
+            <td class="error">
+                <span id="error-title"></span>
             </td>
         </tr>
         <tr>
@@ -105,7 +145,10 @@
                 <label for="input-author">著者：</label>
             </td>
             <td>
-                <input type="text" id="input-author">
+                <input type="text" id="input-author" onchange="validate()">
+            </td>
+            <td class="error">
+                <span id="error-author"></span>
             </td>
         </tr>
         <tr>
@@ -113,7 +156,10 @@
                 <label for="input-isbn13">isbn13：</label>
             </td>
             <td>
-                <input type="text" id="input-isbn13">
+                <input type="text" id="input-isbn13" onchange="validate()">
+            </td>
+            <td class="error">
+                <span id="error-isbn13"></span>
             </td>
         </tr>
         </table>

@@ -1,7 +1,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>lesson07-08</title>
+    <title>本棚アプリ</title>
     <style>
         #book-list {
             list-style: none;
@@ -55,15 +55,7 @@
         ];
         
         window.onload = () => {
-            const ulElement = document.getElementById('book-list');
-    
-            for(let index = 0; index < books.length; index++) {
-                const newLiElement = document.createElement('li');
-                newLiElement.innerHTML = books[index].title;
-                newLiElement.setAttribute('onclick', 'disp(' + index + ')');
-        
-                ulElement.appendChild(newLiElement);
-            }
+            reflesh();
         };
 
         function disp(index) {
@@ -73,17 +65,57 @@
         }
         
         function add() {
+            if(!validate()) {
+                return;
+            }
+            
             const title = document.getElementById('input-title').value;
             const author = document.getElementById('input-author').value;
             const isbn13 = document.getElementById('input-isbn13').value;
-            
+
             const book = {
                 title: title,
                 author: author,
                 isbn13: isbn13
             };
+
+            books.push(book);
+    
+            document.getElementById('input-title').value = '';
+            document.getElementById('input-author').value = '';
+            document.getElementById('input-isbn13').value = '';
+    
+            reflesh();
+        }
+        
+        function reflesh() {
+            const ulElement = document.getElementById('book-list');
+            ulElement.innerHTML = '';
+    
+            for(let index = 0; index < books.length; index++) {
+                const newLiElement = document.createElement('li');
+                newLiElement.innerHTML = books[index].title;
+                newLiElement.setAttribute('onclick', 'disp(' + index + ')');
+        
+                ulElement.appendChild(newLiElement);
+            }
+        }
+        
+        function validate() {
+            const title = document.getElementById('input-title').value;
+            const author = document.getElementById('input-author').value;
             
-            console.log(book);
+            if(!title) {
+                console.log('タイトルが空です');
+                return false;
+            }
+            
+            if(!author) {
+                console.log('著者が空です');
+                return false;
+            }
+            
+            return true;
         }
     </script>
 </head>
