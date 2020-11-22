@@ -170,7 +170,7 @@ element.innerHTML = `
 `remove`関数の中身を実装して、実際に本が削除できるようにしましょう。
 
 実行例  
-![lesson08-07-01](https://user-images.githubusercontent.com/5547149/99892624-0ab36400-2cba-11eb-8a89-30523e8782bd.gif)
+![lesson08-07-01](assets/movgif/lesson08-07-01.gif)
 
 
 ### ヒント
