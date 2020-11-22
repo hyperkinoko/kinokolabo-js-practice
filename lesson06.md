@@ -14,11 +14,11 @@
 * liは枠線を引き（画像参照）、マウスオーバーで背景色を変える
 
 参考画像  
-![参考画像](images/lesson06-01-02.png)
+![参考画像](assets/images/lesson06-01-02.png)
 
 出力例  
 ![出力例](images/lesson06-01-01.png)  
-![出力例](images/lesson06-01-03.png)
+![出力例](assets/images/lesson06-01-03.png)
 
 [答え](samples/lesson06/lesson06-01.html)
 
@@ -34,7 +34,7 @@ const self = {
 ```
 
 出力例  
-![出力例](images/lesson06-02-01.png)
+![出力例](assets/images/lesson06-02-01.png)
 
 [答え](samples/lesson06/lesson06-02.html)
 
@@ -47,7 +47,7 @@ const self = {
 * 名前もjavascriptを使って出力してみましょう。
 
 出力例  
-![出力例](images/lesson06-03-01.png)
+![出力例](assets/images/lesson06-03-01.png)
 
 [答え](samples/lesson06/lesson06-03.html)
 
@@ -63,7 +63,7 @@ const unseis = ['大吉', '中吉', '小吉', '凶', '大凶'];
 ```
 
 出力例  
-![出力例](images/lesson06-03-01.png)
+![出力例](assets/images/lesson06-03-01.png)
 
 [答え](samples/lesson06/lesson06-04.html)
 
@@ -109,8 +109,8 @@ omikuji = {
 ```
 
 出力例  
-![出力例1](images/lesson06-05-01.png)  
-![出力例2](images/lesson06-05-02.png)
+![出力例1](assets/images/lesson06-05-01.png)  
+![出力例2](assets/images/lesson06-05-02.png)
 
 [答え](samples/lesson06/lesson06-05.html)
 
@@ -145,8 +145,8 @@ const omikujis = [
 ```
 
 出力例  
-![出力例1](images/lesson06-05-01.png)  
-![出力例2](images/lesson06-05-02.png)
+![出力例1](assets/images/lesson06-05-01.png)  
+![出力例2](assets/images/lesson06-05-02.png)
 
 [答え](samples/lesson06/lesson06-06.html)
 
@@ -163,6 +163,6 @@ HTMLやCSSは課題1で作ったものを使います。
 
 出力例  
 ![出力例](images/lesson06-01-01.png)  
-![出力例](images/lesson06-01-03.png)
+![出力例](assets/images/lesson06-01-03.png)
 
 [答え](samples/lesson06/lesson06-07.html)

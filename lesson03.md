@@ -6,8 +6,8 @@
 途中の和もコンソールに表示してください。
 
 出力例  
-![出力例](images/lesson03-01-01.png)
-![出力例](images/lesson03-01-02.png)
+![出力例](assets/images/lesson03-01-01.png)
+![出力例](assets/images/lesson03-01-02.png)
 
 ### ヒント
 
@@ -66,7 +66,7 @@ const array = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう
 ```
 
 出力例  
-![出力例](images/lesson03-04-01.png)
+![出力例](assets/images/lesson03-04-01.png)
 
 [答え](samples/lesson03/lesson03-04.html)
 
@@ -82,7 +82,7 @@ const array = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう
 ```
 
 出力例  
-![出力例](images/lesson03-05-01.png)
+![出力例](assets/images/lesson03-05-01.png)
 
 [答え](samples/lesson03/lesson03-05.html)
 
@@ -115,7 +115,7 @@ const array = [87, 96, 72, 88, 79];
 ```
 
 出力例  
-![出力例](images/lesson03-07-01.png)
+![出力例](assets/images/lesson03-07-01.png)
 
 ### ヒント
 

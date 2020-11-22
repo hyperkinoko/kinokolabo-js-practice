@@ -9,8 +9,8 @@
 3. `book`をコンソールに出力してみましょう。
 
 出力例  
-![出力例](images/lesson05-01-01.png)  
-![出力例](images/lesson05-01-02.png)
+![出力例](assets/images/lesson05-01-01.png)  
+![出力例](assets/images/lesson05-01-02.png)
 
 ### ヒント
 
@@ -23,7 +23,7 @@
 課題1で作った`book`オブジェクトをコピーして貼り付け、プロパティごとに別々に出力しましょう。
 
 出力例  
-![出力例](images/lesson05-02-01.png)
+![出力例](assets/images/lesson05-02-01.png)
 
 [答え](samples/lesson05/lesson05-02.html)
 
@@ -47,7 +47,7 @@ const arrayObject = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶ
 4. 配列の中身を順にすべて表示しましょう。
 
 出力例  
-![出力例](images/lesson05-03-01.png)
+![出力例](assets/images/lesson05-03-01.png)
 
 ### ヒント
 
@@ -65,8 +65,8 @@ const arrayObject = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶ
 3. `books`をコンソールに出力してみましょう。
 
 出力例  
-![出力例](images/lesson05-04-01.png)  
-![出力例](images/lesson05-04-02.png)
+![出力例](assets/images/lesson05-04-01.png)  
+![出力例](assets/images/lesson05-04-02.png)
 
 ### ヒント
 
@@ -85,7 +85,7 @@ const arrayObject = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶ
 2. 課題1の`book`オブジェクトをコピーして、`dispBookDetail`の引数にして呼び出しましょう。
 
 出力例  
-![出力例](images/lesson05-05-01.png)
+![出力例](assets/images/lesson05-05-01.png)
 
 [答え](samples/lesson05/lesson05-05.html)
 
@@ -95,7 +95,7 @@ const arrayObject = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶ
 `books`や`dispBookDetail`の定義はそれぞれからコピペしてください。
 
 出力例  
-![出力例](images/lesson05-06-01.png)
+![出力例](assets/images/lesson05-06-01.png)
 
 [答え](samples/lesson05/lesson05-06.html)
 
@@ -109,6 +109,6 @@ const arrayObject = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶ
 3. `books`や`dispBookDetail`の定義はそれぞれからコピペしてください。
 
 出力例  
-![出力例](images/lesson05-07-01.png)
+![出力例](assets/images/lesson05-07-01.png)
 
 [答え](samples/lesson05/lesson05-07.html)

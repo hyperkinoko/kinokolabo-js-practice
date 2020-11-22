@@ -119,6 +119,6 @@ diceの値が偶数か奇数かを調べて、
 4. 3でも5でも割り切れないときはそのままの数字を出力する
 
 出力例  
-![出力例](images/lesson02-07-01.png)
+![出力例](assets/images/lesson02-07-01.png)
 
 [答え](samples/lesson02/lesson02-07.html)

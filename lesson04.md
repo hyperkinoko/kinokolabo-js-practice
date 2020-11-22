@@ -4,7 +4,7 @@
 「こんにちは」と出力する関数`sayHello`を定義し、呼び出しましょう。
 
 出力例  
-![出力例](images/lesson04-01-01.png)
+![出力例](assets/images/lesson04-01-01.png)
 
 [答え](samples/lesson04/lesson04-01.html)
 
@@ -13,7 +13,7 @@
 
 出力例  
 `sayHelloTo('松本');`の実行結果  
-![出力例](images/lesson04-02-01.png)
+![出力例](assets/images/lesson04-02-01.png)
 
 [答え](samples/lesson04/lesson04-02.html)
 
@@ -24,7 +24,7 @@
 3. consoleへの出力は呼び出し側でします。dice内ではしません。
 
 出力例  
-![出力例](images/lesson04-03-01.png)
+![出力例](assets/images/lesson04-03-01.png)
 
 [答え](samples/lesson04/lesson04-03.html)
 
@@ -34,7 +34,7 @@
 2. `dice`を使って3回サイコロを振り、3回の目の合計値を出しましょう。
 
 出力例  
-![出力例](images/lesson04-04-01.png)
+![出力例](assets/images/lesson04-04-01.png)
 
 ### ヒント
 
@@ -49,7 +49,7 @@
 2. `dice`を使って5回サイコロを振り、5回の目の平均値を出しましょう。
 
 出力例  
-![出力例](images/lesson04-05-01.png)
+![出力例](assets/images/lesson04-05-01.png)
 
 [答え](samples/lesson04/lesson04-05.html)
 
@@ -60,7 +60,7 @@
 3. `diceAverage(10)`と`diceAverage(1000000)`を呼び出してみましょう。
 
 出力例  
-![出力例](images/lesson04-06-01.png)
+![出力例](assets/images/lesson04-06-01.png)
 
 ### ヒント
 
@@ -83,7 +83,7 @@ const array2 = [58, 91, 98, 96, 83];
 ```
 
 出力例  
-![出力例](images/lesson04-07-01.png)
+![出力例](assets/images/lesson04-07-01.png)
 
 [答え](samples/lesson04/lesson04-07.html)
 
@@ -99,7 +99,7 @@ const array2 = [58, 91, 98, 96, 83];
 ```
 
 出力例  
-![出力例](images/lesson04-08-01.png)
+![出力例](assets/images/lesson04-08-01.png)
 
 [答え](samples/lesson04/lesson04-08.html)
 
@@ -116,8 +116,8 @@ const array2 = [58, 91, 98, 96, 83];
 ```
 
 出力例  
-![出力例](images/lesson04-09-01.png)  
-![出力例](images/lesson04-09-02.png)
+![出力例](assets/images/lesson04-09-01.png)  
+![出力例](assets/images/lesson04-09-02.png)
 
 ### ヒント
 
@@ -141,7 +141,7 @@ const findNumber = 58;
 ```
 
 出力例  
-![出力例](images/lesson04-09-01.png)  
-![出力例](images/lesson04-09-02.png)
+![出力例](assets/images/lesson04-09-01.png)  
+![出力例](assets/images/lesson04-09-02.png)
 
 [答え](samples/lesson04/lesson04-10.html)

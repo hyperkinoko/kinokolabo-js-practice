@@ -8,8 +8,8 @@
 以降の課題でバリデーションをかけていきますが、まずはその準備として、本が追加されたタイミングで、入力欄をリセットしましょう。
 
 実行例  
-![実行例](images/lesson07-01-01.png)  
-![実行例](images/lesson07-01-02.png)
+![実行例](assets/images/lesson07-01-01.png)  
+![実行例](assets/images/lesson07-01-02.png)
 
 [答え](samples/lesson08/lesson08-01.html)
 
@@ -29,8 +29,8 @@
 これで、タイトルと著者の入力欄が空のときには、追加が実行されないようになりました。
 
 実行例  
-![実行例](images/lesson07-01-01.png)  
-![実行例](images/lesson07-01-02.png)
+![実行例](assets/images/lesson07-01-01.png)  
+![実行例](assets/images/lesson07-01-02.png)
 
 [答え](samples/lesson08/lesson08-02.html)
 
@@ -62,8 +62,8 @@
 これは、`validate`関数のはじめの方に書くといいでしょう。
 
 実行例  
-![実行例](images/lesson07-03-01.png)
-![実行例](images/lesson07-03-02.png)
+![実行例](assets/images/lesson07-03-01.png)
+![実行例](assets/images/lesson07-03-02.png)
 
 [答え](samples/lesson08/lesson08-03.html)
 
@@ -75,8 +75,8 @@
 この本棚アプリにもその仕様を実装してみましょう。
 
 実行例  
-![実行例](images/lesson07-04-01.png)
-![実行例](images/lesson07-04-02.png)
+![実行例](assets/images/lesson07-04-01.png)
+![実行例](assets/images/lesson07-04-02.png)
 
 ### ヒント
 
@@ -130,9 +130,9 @@
 ```
 
 実行例  
-![実行例1](images/lesson08-05-01.png)  
-![実行例2](images/lesson08-05-02.png)
-![実行例3](images/lesson08-05-03.png)
+![実行例1](assets/images/lesson08-05-01.png)  
+![実行例2](assets/images/lesson08-05-02.png)
+![実行例3](assets/images/lesson08-05-03.png)
 
 [答え](samples/lesson08/lesson08-05.html)
 
@@ -158,10 +158,10 @@ element.innerHTML = `
 
 `span`要素への`onclick`属性の追加は、`setAttribute`を使わなくても書けます。
 
-実行例  
-![実行例1](images/lesson08-05-01.png)  
-![実行例2](images/lesson08-05-02.png)
-![実行例3](images/lesson08-05-03.png)
+実行例
+
+課題5と同じです。  
+![実行例1](assets/images/lesson08-05-01.png)
 
 [答え](samples/lesson08/lesson08-06.html)
 
@@ -170,8 +170,8 @@ element.innerHTML = `
 `remove`関数の中身を実装して、実際に本が削除できるようにしましょう。
 
 実行例  
-![実行例](images/lesson07-07-01.png)  
-![実行例](images/lesson07-07-02.png)
+![実行例](assets/images/lesson07-07-01.png)  
+![実行例](assets/images/lesson07-07-02.png)
 
 ### ヒント
 

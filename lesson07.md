@@ -8,8 +8,8 @@
 ただし、`<script>`タグ(javascript)は、`</head>`の**直前**に書きます。
 
 実行例  
-![実行例](images/lesson07-01-01.png)  
-![実行例](images/lesson07-01-02.png)
+![実行例](assets/images/lesson07-01-01.png)  
+![実行例](assets/images/lesson07-01-02.png)
 
 [答え](samples/lesson07/lesson07-01.html)
 
@@ -19,8 +19,8 @@
 ただし、`<script>`タグ(javascript)は、`</head>`の**直前**に書きます。
 
 実行例  
-![実行例](images/lesson07-01-01.png)  
-![実行例](images/lesson07-01-02.png)
+![実行例](assets/images/lesson07-01-01.png)  
+![実行例](assets/images/lesson07-01-02.png)
 
 [答え](samples/lesson07/lesson07-02.html)
 
@@ -32,8 +32,8 @@
 * 「おみくじを引く」ボタンを押したときに、入力した名前を表示する。
 
 実行例  
-![実行例](images/lesson07-03-01.png)
-![実行例](images/lesson07-03-02.png)
+![実行例](assets/images/lesson07-03-01.png)
+![実行例](assets/images/lesson07-03-02.png)
 
 [答え](samples/lesson07/lesson07-03.html)
 
@@ -48,8 +48,8 @@
 * 複数の要素の`onclick`に、同一関数(disp)の実行を指定しても大丈夫です。
 
 実行例  
-![実行例](images/lesson07-04-01.png)
-![実行例](images/lesson07-04-02.png)
+![実行例](assets/images/lesson07-04-01.png)
+![実行例](assets/images/lesson07-04-02.png)
 
 [答え](samples/lesson07/lesson07-04.html)
 
@@ -61,9 +61,9 @@
 **注意： indexは0から数えてください。**
 
 実行例  
-![実行例1](images/lesson07-05-01.png)  
-![実行例2](images/lesson07-05-02.png)
-![実行例3](images/lesson07-05-03.png)
+![実行例1](assets/images/lesson07-05-01.png)  
+![実行例2](assets/images/lesson07-05-02.png)
+![実行例3](assets/images/lesson07-05-03.png)
 
 [答え](samples/lesson07/lesson07-05.html)
 
@@ -91,9 +91,9 @@
 * 本が3冊あるとき、`disp(1)`の`1`のところには、`0~2`の数字が入りますね。
 
 実行例  
-![実行例1](images/lesson07-05-01.png)  
-![実行例2](images/lesson07-05-02.png)
-![実行例3](images/lesson07-05-03.png)
+![実行例1](assets/images/lesson07-05-01.png)  
+![実行例2](assets/images/lesson07-05-02.png)
+![実行例3](assets/images/lesson07-05-03.png)
 
 [答え](samples/lesson07/lesson07-06.html)
 
@@ -121,8 +121,8 @@
 * 本のタイトルを中央揃えにするため、`#selected-book h3`にCSS`text-align: center;`を追加しましょう。
 
 実行例  
-![実行例](images/lesson07-07-01.png)  
-![実行例](images/lesson07-07-02.png)
+![実行例](assets/images/lesson07-07-01.png)  
+![実行例](assets/images/lesson07-07-02.png)
 
 [答え](samples/lesson07/lesson07-07.html)
 
@@ -218,8 +218,8 @@ CSS:
 * `.value`や、`onclick`をフル活用します。
 
 実行例  
-![実行例](images/lesson07-08-01.png)  
-![実行例](images/lesson07-08-02.png)
+![実行例](assets/images/lesson07-08-01.png)  
+![実行例](assets/images/lesson07-08-02.png)
 
 [答え](samples/lesson07/lesson07-08.html)
 
@@ -235,6 +235,6 @@ CSS:
 リスト表示を一度クリアするには、`<ul要素>.innerHTML = '':`を使います。
 
 実行例  
-![実行例](images/lesson07-09-01.png)
+![実行例](assets/images/lesson07-09-01.png)
 
 [答え](samples/lesson07/lesson07-09.html)
