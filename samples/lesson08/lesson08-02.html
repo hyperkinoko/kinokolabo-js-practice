@@ -55,7 +55,7 @@
         ];
         
         window.onload = () => {
-            reflesh();
+            refresh();
         };
 
         function disp(index) {
@@ -85,10 +85,10 @@
             document.getElementById('input-author').value = '';
             document.getElementById('input-isbn13').value = '';
     
-            reflesh();
+            refresh();
         }
         
-        function reflesh() {
+        function refresh() {
             const ulElement = document.getElementById('book-list');
             ulElement.innerHTML = '';
     

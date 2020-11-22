@@ -55,7 +55,7 @@
         ];
         
         window.onload = () => {
-            reflesh();
+            refresh();
         };
 
         function disp(index) {
@@ -77,10 +77,10 @@
             
             books.push(book);
             
-            reflesh();
+            refresh();
         }
         
-        function reflesh() {
+        function refresh() {
             const ulElement = document.getElementById('book-list');
             ulElement.innerHTML = '';
     

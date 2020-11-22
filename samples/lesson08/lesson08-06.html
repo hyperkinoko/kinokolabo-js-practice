@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>本棚アプリ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <style>
         #book-list {
             list-style: none;
@@ -38,6 +39,15 @@
         .error {
             color: red;
         }
+        
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .book-title {
+            margin-right: 2rem;
+        }
     </style>
     <script>
         const books = [
@@ -67,7 +77,11 @@
             document.getElementById('book-author').innerHTML = books[index].author;
             document.getElementById('book-isbn13').innerHTML = books[index].isbn13;
         }
-        
+
+        function remove(index) {
+            console.log(`${index}番目の本を削除します`);
+        }
+
         function add() {
             if(validate()) {
                 const title = document.getElementById('input-title').value;
@@ -96,7 +110,14 @@
     
             for(let index = 0; index < books.length; index++) {
                 const newLiElement = document.createElement('li');
-                newLiElement.innerHTML = books[index].title;
+                newLiElement.innerHTML = `
+                    <div class="d-flex">
+                        <span class="book-title">
+                            ${books[index].title}
+                        </span>
+                        <span onclick="remove(${index})"><i class="fas fa-trash"></i></span>
+                    </div>
+                `;
                 newLiElement.setAttribute('onclick', 'disp(' + index + ')');
         
                 ulElement.appendChild(newLiElement);
@@ -179,7 +200,7 @@
         <div id="info">
             <p>著者: <span id="book-author"></span></p>
             <p>isbn13: <span id="book-isbn13"></span></p>
-        </div>
+    </div>
     </div>
 </body>
 </html>

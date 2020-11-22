@@ -1,0 +1,72 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson08-05</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        #book-list {
+            list-style: none;
+        }
+
+        #book-list li {
+            width: 500px;
+            border: solid 1px #808080;
+            border-radius: 0.5em;
+            margin: 10px;
+            padding: 1em;
+        }
+
+        #book-list li:hover {
+            background-color: #CECECE;
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .book-title {
+            margin-right: 2rem;
+        }
+    </style>
+    <script>
+        function disp(index) {
+            console.log(`${index}番目の本をクリックした`);
+        }
+        
+        function remove(index) {
+            console.log(`${index}番目の本を削除します`);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>本のリスト</h1>
+    <ul id="book-list">
+        <li onclick="disp(0)">
+            <div class="d-flex">
+                <span class="book-title">
+                    改訂新版JavaScript本格入門 ~モダンスタイルによる基礎から現場での応用まで
+                </span>
+                <span onclick="remove(0)"><i class="fas fa-trash"></i></span>
+            </div>
+        </li>
+        <li onclick="disp(1)">
+            <div class="d-flex">
+                <span class="book-title">
+                    初めてのJavaScript 第3版 ―ES2015以降の最新ウェブ開発
+                </span>
+                <span onclick="remove(1)"><i class="fas fa-trash"></i></span>
+            </div>
+        </li>
+        <li onclick="disp(2)">
+            <div class="d-flex">
+                <span class="book-title">
+                    スラスラ読める JavaScript ふりがなプログラミング (ふりがなプログラミングシリーズ)
+                </span>
+                <span onclick="remove(2)"><i class="fas fa-trash"></i></span>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

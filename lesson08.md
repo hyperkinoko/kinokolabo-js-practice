@@ -3,237 +3,179 @@
 
 ## 課題1
 
-レッスン7の最後の課題では、本を追加することができるようになりました。
+レッスン7の最後の課題では、本を追加できるようになりました。
 
 以降の課題でバリデーションをかけていきますが、まずはその準備として、本が追加されたタイミングで、入力欄をリセットしましょう。
-
-実行例  
-[実行例](movies/lesson08-01.mov)
-
-[答え](samples/lesson08/lesson08-01.html)
-
-## 課題2
-
-課題1と同じものを、今度は、javascript内で`addEventListener`を使って実装してみてください。  
-ただし、`<script>`タグ(javascript)は、`</head>`の**直前**に書きます。
 
 実行例  
 ![実行例](images/lesson07-01-01.png)  
 ![実行例](images/lesson07-01-02.png)
 
-[答え](samples/lesson07/lesson07-02.html)
+[答え](samples/lesson08/lesson08-01.html)
+
+## 課題2
+
+バリデーションを作っていきます。
+
+新たに、`validate`という関数を作りましょう。
+
+1. この関数は、`boolean`（`true`か`false`）を返します。
+2. `validate`は、`input-title`に入力された値(`value`)が空の場合、コンソールに「タイトルが空です」と出力した後、`false`を返します。
+3. `validate`は、`input-author`に入力された値(`value`)が空の場合、コンソールに「著者が空です」と出力した後、`false`を返します。
+4. 2にも3にも引っかからなかった場合、バリデーション成功（入力が正当である）として、`true`を返します。
+
+次に、`add`関数のいちばんはじめに、「`validate()`の値（返り値）がfalseならば、`return`でaddを抜ける」という意味のコードを書いてみましょう。
+
+これで、タイトルと著者の入力欄が空のときには、追加が実行されないようになりました。
+
+実行例  
+![実行例](images/lesson07-01-01.png)  
+![実行例](images/lesson07-01-02.png)
+
+[答え](samples/lesson08/lesson08-02.html)
 
 ## 課題3
 
-課題1か課題2のどちらかを以下のように改造してください。
+課題2では、バリデーションを実装しましたが、コンソールにエラーメッセージを表示する方法は、ユーザフレンドリーではありませんね。
+エラーメッセージを表示する欄を設けて、バリデーションに引っかかったときは、そこにメッセージを表示するようにしましょう。
 
-* 名前を入力する欄を作る。
-* 「おみくじを引く」ボタンを押したときに、入力した名前を表示する。
+エラーメッセージを表示する欄は、次のようにマークアップします。
+
+```html
+<tr>
+    <td>
+        <label for="input-title">タイトル：</label>
+    </td>
+    <td>
+        <input type="text" id="input-title">
+    </td>
+    <!-- 以下を追加 -->
+    <td class="error">
+        <span id="error-title"></span>
+    </td>
+</tr>
+```
+
+`error`クラスに対して文字色を赤にするCSSも書いてみましょう。
+
+また、一度エラーメッセージを表示したあとに、正しく入力が行われた場合、エラーメッセージを消さないといけません。  
+これは、`validate`関数のはじめの方に書くといいでしょう。
 
 実行例  
 ![実行例](images/lesson07-03-01.png)
 ![実行例](images/lesson07-03-02.png)
 
-[答え](samples/lesson07/lesson07-03.html)
+[答え](samples/lesson08/lesson08-03.html)
 
 ## 課題4
 
-レッスン6、課題1のHTMLにjavascriptを追加して、本をクリックしたときにコンソールに「クリックした」と表示してみましょう。  
-クリックイベントは、HTMLに`onclick`を付加する方法で実装してください。
+課題3では、追加ボタンを押したタイミングでバリデーションを行いました。
 
-### ヒント
-
-* コンソールに「クリックした」と表示する関数を`disp`という名前で定義しましょう。
-* 複数の要素の`onclick`に、同一関数(disp)の実行を指定しても大丈夫です。
+最近のWebシステムでは、「入力ミスがあるとそもそも追加ボタンが押せない」という仕様がほとんどです。  
+この本棚アプリにもその仕様を実装してみましょう。
 
 実行例  
 ![実行例](images/lesson07-04-01.png)
 ![実行例](images/lesson07-04-02.png)
 
-[答え](samples/lesson07/lesson07-04.html)
+### ヒント
+
+* 「ボタンを押せない」というのは、ボタンの`disabled`プロパティを`true`にすることで実装できます。
+* HTMLが読み込まれた時点では「追加」ボタンは`disabled`です。  これはHTMLに直接書くのが手っ取り早いでしょう。  `<button ~ disabled>`のように書きます。
+* それぞれの入力欄に入力された内容が変化するたびに`validate()`を実行します。
+* `input`要素の入力が変化したことを検知する属性は`onchange`です。`onchange="入力が変化したときに実行したい関数"`と書きます。
+* `validate`内で、`return false;`する直前、つまりバリデーションに引っかかったタイミングで、ボタンの`disabled`プロパティを`true`にします。
+* `validate`内で、`return true;`する直前、つまりバリデーションがすべて通ったタイミングで、ボタンの`disabled`プロパティを`false`（ボタンが押せるようになる）にします。
+* `refresh`の最後でも、ボタンの`disabled`プロパティを`true`にします。
+
+[答え](samples/lesson08/lesson08-04.html)
 
 ## 課題5
 
-課題4の出力では、何番目の本がクリックされたかわかりません。  
-`disp`関数の引数に「何番目か」を表す`index`を定義し、`onclick`の中で呼び出すときに、引数に番号を渡してあげましょう。  
-例えば、1番目の本をクリックしたときには、`disp(1)`が実行されるようにします。  
-**注意： indexは0から数えてください。**
+リストの中に削除アイコンを表示するためのHTMLを作成しましょう。
+
+1. レッスン7課題5のコードをコピーします。
+2. `li`要素の中を膨らませます。`li`直下に`div`要素を作成し、`div`直下に2つの`span`を置きます。
+3. 1つ目の`span`は、タイトルを入れます。2つめの`span`には削除アイコンを入れます。
+4. 削除アイコンは、`<i class="fas fa-trash"></i>`とマークアップします。
+5. 削除アイコンをクリックすると、`remove(index)`という関数が実行されます。indexは0~2の数字です。関数も定義してください。中身は「index番目の本を削除します」というコンソール表示のみでOKです。
+6. アイコンを表示するための「Font Awesome」というライブラリを読み込みます。`head`内に以下のコードを挿入します。
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+```
+
+「Font Awesome」ライブラリの詳しい説明は、[ここ](https://dev.to/weeb/font-awesome-guide-and-useful-tricks-you-might-ve-not-known-about-until-now-o15)あたりを読むといいでしょう。  
+アイコン一覧は[ここ](https://fontawesome.com/icons?d=gallery&m=free)にあります。`delete`で検索してみましょう。
+
+次に、レイアウトを整えます。
+
+まず、`div`要素に`d-flex`というclassをつけて、そのクラスを使ってCSSをあてましょう。  
+`div`の中で要素を横並びにするには、`div`要素に次のようなCSSをあてます。
+
+```css
+.d-flex {
+    display: flex; /* 子要素を横並びにする */
+    justify-content: space-between; /* 子要素は間に等分のスペースを取る */
+}
+```
+
+タイトル部がゴミ箱のアイコンと近すぎるので、タイトルの右側に2文字ぶんのマージンを取りましょう。  
+タイトル部（1つめの`span`）には、`book-title`というクラスをつけましょう。
+
+```css
+.book-title {
+    margin-right: 2rem;
+}
+```
 
 実行例  
-![実行例1](images/lesson07-05-01.png)  
-![実行例2](images/lesson07-05-02.png)
-![実行例3](images/lesson07-05-03.png)
+![実行例1](images/lesson08-05-01.png)  
+![実行例2](images/lesson08-05-02.png)
+![実行例3](images/lesson08-05-03.png)
 
-[答え](samples/lesson07/lesson07-05.html)
+[答え](samples/lesson08/lesson08-05.html)
 
 ## 課題6
 
-**難問です。わからなければ遠慮せず答えを見て、先に進んでください。**
+`要素.innerHTML`の右辺には、長ーいHTMLを入れることもできます。  
+長いHTMLを入れるときは、テンプレートリテラルを使うと便利です。  
+テンプレートリテラルは、途中で改行することもできます。
 
-課題5では、直接HTMLに`<li>`要素を書き込んでいます。  
-レッスン6の課題7をコピーして、これと同じようにjavascriptの中で`<li>`要素を追加し、  
-なおかつ、上記課題5までと同じような動きになるように書き換えてみましょう。  
-ただし、`<script>`タグ(javascript)は、`</head>`の**直前**に書きます。
-
-`onclick`属性は、javascriptからも、以下のようにして設定することができます。  
-（addEventListenerは引数を渡すのがとても難しいので、この方法を使います）
-
-`onclick="disp(1)"`のようにしたいとき
-
+```javascript
+element.innerHTML = `
+    <div>
+      <span>
+      </span>
+    </div>
+`;
 ```
-<要素>.setAttribute('onclick', 'disp(1)');
-```
+このようなこともできます。  
+まるで普通にHTMLを書いているような気分になりますね。
 
-### ヒント
+さて、課題4と課題5をうまく組み合わせて、`ul`要素の中身をプログラムを使って作成してください。
+レッスン7の課題6が参考になるでしょう。
 
-* `for...of`を使うと`index`が取れないので、`for(let i = 0; i < books.length; i++) {}`を使いましょう。
-* 本が3冊あるとき、`disp(1)`の`1`のところには、`0~2`の数字が入りますね。
+`span`要素への`onclick`属性の追加は、`setAttribute`を使わなくても書けます。
 
 実行例  
-![実行例1](images/lesson07-05-01.png)  
-![実行例2](images/lesson07-05-02.png)
-![実行例3](images/lesson07-05-03.png)
+![実行例1](images/lesson08-05-01.png)  
+![実行例2](images/lesson08-05-02.png)
+![実行例3](images/lesson08-05-03.png)
 
-[答え](samples/lesson07/lesson07-06.html)
+[答え](samples/lesson08/lesson08-06.html)
 
 ## 課題7
 
-タイトルリストでクリックされた本の詳細を、画面下部に表示しましょう。  
-選択された本の詳細を表示するエリアは、以下のようにマークアップしましょう。
-
-```html
-<h2>選択された本の詳細</h2>
-<div id="selected-book">
-    <h3 id="book-title"></h3>
-    <div id="info">
-        <p>著者: <span id="book-author"></span></p>
-        <p>isbn13: <span id="book-isbn13"></span></p>
-    </div>
-</div>
-```
-
-### ヒント
-
-* クリックされた本が何番目かは`index`でわかります。
-* `#selected-book`に当たるCSSは`<li>`と同じです。複数要素に同じCSSを当てたい要素は、CSS内で、`要素, 要素`とカンマ区切りで並べて書くことができます。
-* `#selected-book`は`<li>`と違って左側にマージンが取られません。`#selected-book`にCSS`margin-left: 50px;`を追加しましょう。
-* 本のタイトルを中央揃えにするため、`#selected-book h3`にCSS`text-align: center;`を追加しましょう。
+`remove`関数の中身を実装して、実際に本が削除できるようにしましょう。
 
 実行例  
 ![実行例](images/lesson07-07-01.png)  
 ![実行例](images/lesson07-07-02.png)
 
-[答え](samples/lesson07/lesson07-07.html)
-
-## 課題8
-
-本棚アプリに本を追加する機能をつけましょう。 -- 第1段階
-
-1. 本の各情報の入力欄を作ります。
-2. 「追加」ボタンを用意します。
-3. 「追加」ボタンを押すと、その情報で本のオブジェクトを生成します。
-4. 生成されたオブジェクトを、コンソールに表示しましょう。
-5. HTML、CSSは下記のように書きましょう。
-
-HTML:
-```html
-<h1>本棚</h1>
-<h2>リストに追加</h2>
-<div id="add">
-    <table>
-    <tr>
-        <td>
-            <label for="input-title">タイトル：</label>
-        </td>
-        <td>
-            <input type="text" id="input-title">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="input-author">著者：</label>
-        </td>
-        <td>
-            <input type="text" id="input-author">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="input-isbn13">isbn13：</label>
-        </td>
-        <td>
-            <input type="text" id="input-isbn13">
-        </td>
-    </tr>
-    </table>
-    <button id="add-button" onclick="add()">追加</button>
-</div>
-
-<h2>一覧</h2>
-<ul id="book-list"></ul>
-
-<h2>選択された本の詳細</h2>
-・・・以下省略
-```
-
-CSS:
-```css
-#book-list {
-    list-style: none;
-}
-
-#book-list li, #selected-book, #add {
-    width: 500px;
-    border: solid 1px #808080;
-    border-radius: 0.5em;
-    margin: 10px;
-    padding: 1em;
-}
-
-#book-list li:hover {
-    background-color: #CECECE;
-}
-
-#selected-book, #add {
-    margin-left: 50px;
-}
-
-#selected-book h3 {
-    text-align: center;
-}
-
-#add {
-    text-align: center;
-}
-
-#add table {
-    margin-bottom: 20px;
-}
-```
-
 ### ヒント
 
-* `addBook`という関数を用意しましょう。
-* `.value`や、`onclick`をフル活用します。
+* クリックされた本が何番目かは`index`でわかります。
+* 配列からindex番目の要素を削除するには、`配列.splice(index, 1)`と書きます。
 
-実行例  
-![実行例](images/lesson07-08-01.png)  
-![実行例](images/lesson07-08-02.png)
-
-[答え](samples/lesson07/lesson07-08.html)
-
-## 課題9
-
-本棚アプリに本を追加する機能をつけましょう。 -- 第2段階
-
-課題8で入力した内容をオブジェクトにするところまでできました。  
-オブジェクト配列`books`に入力した本のオブジェクトを追加しましょう。  
-配列に本を追加しても、表示は変わりません。  
-表示を更新するために、関数`reflesh()`を呼びましょう。  
-`window.onload`内に書いていた内容を関数`reflesh()`として切り出します。  
-リスト表示を一度クリアするには、`<ul要素>.innerHTML = '':`を使います。
-
-実行例  
-![実行例](images/lesson07-09-01.png)
-
-[答え](samples/lesson07/lesson07-09.html)
+[答え](samples/lesson07/lesson07-07.html)
