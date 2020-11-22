@@ -8,8 +8,7 @@
 以降の課題でバリデーションをかけていきますが、まずはその準備として、本が追加されたタイミングで、入力欄をリセットしましょう。
 
 実行例  
-![実行例](assets/images/lesson07-01-01.png)  
-![実行例](assets/images/lesson07-01-02.png)
+![実行例](assets/movgif/lesson08-01-01.gif)
 
 [答え](samples/lesson08/lesson08-01.html)
 
@@ -178,4 +177,4 @@ element.innerHTML = `
 * クリックされた本が何番目かは`index`でわかります。
 * 配列からindex番目の要素を削除するには、`配列.splice(index, 1)`と書きます。
 
-[答え](samples/lesson07/lesson07-07.html)
+[答え](samples/lesson08/lesson08-07.html)
