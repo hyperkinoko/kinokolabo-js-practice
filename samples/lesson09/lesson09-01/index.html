@@ -1,0 +1,63 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>本棚アプリ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
+</head>
+<body>
+<h1>本棚</h1>
+<h2>リストに追加</h2>
+<div id="add">
+  <table>
+    <tr>
+      <td>
+        <label for="input-title">タイトル：</label>
+      </td>
+      <td>
+        <input type="text" id="input-title" onchange="validate()">
+      </td>
+      <td class="error">
+        <span id="error-title"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="input-author">著者：</label>
+      </td>
+      <td>
+        <input type="text" id="input-author" onchange="validate()">
+      </td>
+      <td class="error">
+        <span id="error-author"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="input-isbn13">isbn13：</label>
+      </td>
+      <td>
+        <input type="text" id="input-isbn13" onchange="validate()">
+      </td>
+      <td class="error">
+        <span id="error-isbn13"></span>
+      </td>
+    </tr>
+  </table>
+  <button id="add-button" onclick="add()" disabled>追加</button>
+</div>
+
+<h2>一覧</h2>
+<ul id="book-list"></ul>
+
+<h2>選択された本の詳細</h2>
+<div id="selected-book">
+  <h3 id="book-title"></h3>
+  <div id="info">
+    <p>著者: <span id="book-author"></span></p>
+    <p>isbn13: <span id="book-isbn13"></span></p>
+  </div>
+</div>
+</body>
+</html>
