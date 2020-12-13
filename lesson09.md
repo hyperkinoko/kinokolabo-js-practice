@@ -28,7 +28,7 @@ jQueryは、DOMを操作することに長けたjavascriptライブラリです�
 ダウンロードして簡単に使うことができます。
 
 `lesson09-01`フォルダをコピーして、`lesson09-02`フォルダを作ります。
-[こちら]()から`uncompressed`をダウンロードして、`lesson09-02`フォルダに入れます。
+[こちら](https://jquery.com/download/)から`uncompressed`をダウンロードして、`lesson09-02`フォルダに入れます。
 
 `index.html`にjQueryを読み込むコード（タグ）を書き、`index.html`と`main.js`を以下のように変更します。
 
