@@ -1,4 +1,5 @@
 # レッスン9: 外部ファイル・ライブラリとjQuery
+
 このレッスンでは、CSSとjavascriptの外部ファイル化と、有名なライブラリであるjQueryについて学びます。
 
 ## 課題1
@@ -93,5 +94,18 @@ window.onload = () => {
 ### 実行例
 
 ![lesson09-03-01](assets/movgif/lesson08-07-01.gif)
+
+### ヒント
+
+`document.getElementById('box').innerHTML = 'xxx'`  
+は  
+`$('#box').html('xxx')`  
+と書き換えます。
+
+生のjavascript（バニラとも言います）からjQueryへの書き換えは、「jQuery <書き換えたいプロパティやメソッド>」でググると、だいたい出てきます。  
+例えば、`document.getElementById('box').setAttribute(〜, 〜)`  
+をjQueryに書き換えたいときは、「jQuery setAttribute」でググるといいでしょう。
+
+もちろん、jQueryを使うと、生のjavascriptでは実現しにくい、もっといろいろなことが表現できるのですが、現段階では、単純な書き換えが使えればOKです。
 
 [答え](samples/lesson09/lesson09-03)
