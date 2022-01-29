@@ -11,11 +11,15 @@
 ### 実行例
 ![実行例](assets/movgif/lesson10-01-01.gif)
 
-[答え](samples/lesson10/lesson10-01)
-
 ### HINT
 
-setTimeOut
+繰り返し処理は以下のように書きます。
+
+```js
+setInterval(繰り返したい処理を書いた関数, 繰り返し間隔);
+```
+
+[答え](samples/lesson10/lesson10-01)
 
 ## 課題2
 
@@ -46,6 +50,18 @@ setTimeOut
 
 ### 実行例
 ![実行例](assets/movgif/lesson10-03-01.gif)
+
+### HINT
+
+繰り返し処理を止めるには，以下のように書きます。
+
+```js
+let timerId;
+・・・略・・・
+timerId = setInterval(繰り返したい処理を書いた関数, 繰り返し間隔);
+・・・略・・・
+clearInterval(timerId);
+```
 
 [答え](samples/lesson10/lesson10-03)
 
