@@ -9,7 +9,7 @@
 ※ タイマーを止める機能がないので，止めるにはブラウザのタブを閉じてください。
 
 ### 実行例
-![実行例](assets/images/lesson10-01-01.gif)
+![実行例](assets/movgif/lesson10-01-01.gif)
 
 [答え](samples/lesson10/lesson10-01)
 
@@ -27,7 +27,7 @@ setTimeOut
 ※ タイマーを止める機能がないので，止めるにはブラウザのタブを閉じてください。
 
 ### 実行例
-![実行例](assets/images/lesson10-02-01.gif)
+![実行例](assets/movgif/lesson10-02-01.gif)
 
 [答え](samples/lesson10/lesson10-02)
 
@@ -45,7 +45,7 @@ setTimeOut
 ※ タイマーを0にする機能がないので，0に戻すにはブラウザのタブをリロードしてください。
 
 ### 実行例
-![実行例](assets/images/lesson10-03-01.gif)
+![実行例](assets/movgif/lesson10-03-01.gif)
 
 [答え](samples/lesson10/lesson10-03)
 
@@ -62,6 +62,6 @@ setTimeOut
 デザインは`style.css`に書いてあります。お好みで書き換えてください。
 
 ### 実行例
-![実行例](assets/images/lesson10-04-01.gif)
+![実行例](assets/movgif/lesson10-04-01.gif)
 
 [答え](samples/lesson10/lesson10-04)
