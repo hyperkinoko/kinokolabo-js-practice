@@ -1,0 +1,40 @@
+.game-wrapper {
+    position: relative;
+    margin: 50px;
+}
+
+.canvas-wrapper {
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 2px darkgray;
+}
+
+#canvas {
+    z-index: 1;
+}
+
+#canvas-bg {
+    z-index: 0;
+    background-color: black;
+}
+
+.button-wrapper {
+    position: absolute;
+    top: 420px;
+    left: 30px;
+    width: 150px;
+}
+
+.button-row {
+    text-align: center;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+}

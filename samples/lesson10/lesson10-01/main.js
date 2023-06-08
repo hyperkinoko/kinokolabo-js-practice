@@ -7,5 +7,5 @@ window.onload = () => {
 
 function countUp() {
   count++;
-  document.getElementById("timer").innerHTML = count;
+  document.getElementById('timer').innerHTML = count;
 }
