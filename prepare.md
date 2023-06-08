@@ -40,7 +40,7 @@ javascriptを実行するいちばん簡単な方法は、HTMLに埋め込むこ
 </html>
 ```
 
-HTMLを埋め込んだjavascriptを実行するときには、エクスプローラーやFinderで該当ファイルを右クリックして、「Google Chromeで開く」を選択します。（OSやバージョンで若干違いがあります）
+HTMLに埋め込んだjavascriptを実行するときには、エクスプローラーやFinderで該当ファイルを右クリックして、「Google Chromeで開く」を選択します。（OSやバージョンで若干違いがあります）
 
 Google Chromeでjavascriptを含むHTMLファイルを実行したとき、`console.log()`で出力されるものを見るためには、consoleを開く必要があります。  
 ブラウザの画面上で右クリックして、「検証」を選択し、右側に表示される検証画面のConsoleタブをクリックします。
